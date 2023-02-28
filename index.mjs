@@ -1,6 +1,8 @@
 import fs from 'fs/promises';
 import inquirer from 'inquirer';
-import { renderLicenseSection, renderLicenseBadge, renderLicenseLink } from './utils/generateMArkdown.js';
+// import pkg from './utils/markdown.js';
+// const { renderLicenseSection, renderLicenseBadge, renderLicenseLink } = pkg;
+import { renderLicenseSection, renderLicenseBadge, renderLicenseLink } from './utils/markdown.js';
 
 async function createFile() {
   const answers = await inquirer.prompt([
@@ -85,7 +87,7 @@ async function createFile() {
   
   ## License 
   
-  ${licenseSection}
+${licenseSection}
 ${licenseBadge}
 ${licenseLink}`;
 
